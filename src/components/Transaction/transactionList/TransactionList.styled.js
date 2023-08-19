@@ -6,5 +6,6 @@ export const TableRaw = styled.tr`
 export const TableData = styled.td`
   padding: 10px;
   border: 1px solid #ccc;
+  border-radius: 5px;
   text-align: center;
 `;
