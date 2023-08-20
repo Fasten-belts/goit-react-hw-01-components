@@ -7,7 +7,24 @@ export const ProfileStats = ({ userStats }) => {
   return (
     <Stats className="stats">
       {statsEntries.map(([key, value]) => {
-        return <StatsListEl listData={{ key, value }} key={key} />;
+        let color;
+        switch (key) {
+          case 'followers':
+            color = '#345492';
+            break;
+          case 'views':
+            color = '#56953e';
+            break;
+          case 'likes':
+            color = '#990000';
+            break;
+          default:
+            color = 'black';
+        }
+
+        return (
+          <StatsListEl key={key} listData={{ key, value }} color={color} />
+        );
       })}
     </Stats>
   );
